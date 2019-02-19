@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { Game } from '../game';
+import { Game } from '../Game';
 
 @Component({
   selector: 'app-details',
@@ -13,20 +13,21 @@ export class DetailsPage implements OnDestroy, OnInit {
   game: Game;
 
   constructor(
-    private route: ActivatedRoute,
+    private actRoute: ActivatedRoute,
     private navCtrl: NavController
-  ) { }
-
-  goBackToGames() {
-    this.navCtrl.back();
-  }
+    ) { }
 
   ngOnInit() {
-    this.game = JSON.parse(this.route.snapshot.params.gameByGenre)
+    console.log(this.actRoute.snapshot.params.title);
+   this.game = JSON.parse(this.actRoute.snapshot.params.details);
   }
 
   ngOnDestroy() {
     console.log('DetailsPage destroyed');
+  }
+
+  goBackToGames() {
+    this.navCtrl.back();
   }
 
 }
