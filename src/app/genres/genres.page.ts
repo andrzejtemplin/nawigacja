@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-genres',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./genres.page.scss'],
 })
 export class GenresPage implements OnInit {
+  genres: string[] = ["RPG", "Action"];
 
-  constructor() { }
+  constructor(
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
   }
+
+  ngOnDestroy() {
+    console.log('GenresPage destroyed');
+  }
+
+  navigateToGames(genre: string) {
+    this.navCtrl.navigateForward(['/games', { genre: genre }]);
+  };
 
 }
