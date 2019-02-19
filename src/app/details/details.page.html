@@ -1,12 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Game details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-{{game}}
+  <p><b>title:</b> {{game.title}}</p>
+  <p><b>tgenre:</b> {{game.genre}}</p>
+  <p><b>platform:</b> {{game.platform}}</p>
   <p>
-    <ion-button color="primary" routerLink="/genre">Back</ion-button>
+    <ion-button color="primary" (click)="goBackToGames();">Back</ion-button>
   </p>
 </ion-content>
