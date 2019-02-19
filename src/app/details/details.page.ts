@@ -18,7 +18,6 @@ export class DetailsPage implements OnDestroy, OnInit {
     ) { }
 
   ngOnInit() {
-    console.log(this.actRoute.snapshot.params.title);
    this.game = JSON.parse(this.actRoute.snapshot.params.details);
   }
 
