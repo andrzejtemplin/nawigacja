@@ -8,7 +8,7 @@ import { Game } from '../game';
   templateUrl: './details.page.html',
   styleUrls: ['./details.page.scss'],
 })
-export class DetailsPage implements OnDestroy, OnInit {
+export class DetailsPage implements OnInit, OnDestroy {
 
   game: Game;
 

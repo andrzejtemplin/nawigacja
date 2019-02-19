@@ -6,7 +6,7 @@ import { NavController } from '@ionic/angular';
   templateUrl: './genres.page.html',
   styleUrls: ['./genres.page.scss'],
 })
-export class GenresPage implements OnInit {
+export class GenresPage implements OnInit, OnDestroy {
   genres: string[] = ["RPG", "Action"];
 
   constructor(
