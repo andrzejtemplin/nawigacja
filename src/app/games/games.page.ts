@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { Game } from '../Game';
+import { Game } from '../game';
 
 @Component({
   selector: 'app-games',
