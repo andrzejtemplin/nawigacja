@@ -33,8 +33,6 @@ export class GamesPage implements OnInit, OnDestroy {
   }
 
   goToDetails(item: Game) {
-    console.log(JSON.stringify(item));
-    let params = JSON.stringify(item);
     this.navCtrl.navigateForward(['details', { details: JSON.stringify(item) }]);
   }
 
