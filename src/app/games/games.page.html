@@ -1,19 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Games by genre</ion-title>
+    <ion-title>games</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item *ngFor="let game of games" detail (click)="goToDetails(game);">
-      <ion-label>{{game.title}}</ion-label>
-    </ion-item>
-  </ion-list>
-  <p>
-    <ion-button color="primary" (click)="goBackToGenres();">Back</ion-button>
-  </p>
+
 </ion-content>
